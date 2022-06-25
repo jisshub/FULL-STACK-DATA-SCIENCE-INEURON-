@@ -1,6 +1,6 @@
 from crypt import methods
 import pickle
-from flask import Flask, request, app, jsonify
+from flask import Flask, request, app, jsonify, url_for
 import numpy as np
 import pandas as pd
 
@@ -22,6 +22,14 @@ def predictions():
     # predict the output using new data.
     output = model.predict(new_data)[0]
     # convert the output to json.
+    return jsonify(output)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # get values from form inputs
+    data = request.form.values()
+    new_data = [list(data.values())]
+    output = model.predict(new_data)[0]
     return jsonify(output)
 
 if __name__ == '__main__':

@@ -111,7 +111,9 @@ We get the output as below with the predicted response:
 
 The output is 120.
 
-### Predicting batch output from batch inputs.
+## Deploy the Flask App in Heroku
+
+
 
 
 
