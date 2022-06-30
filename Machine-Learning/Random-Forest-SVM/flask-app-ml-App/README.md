@@ -130,9 +130,18 @@ The output is 120.
 
 create a file in project folder called **Procfile**
 
-```procfile
+Add the below content 
+
+```Procfile
 web: gunicorn app:app
 ```
+
+Push the changes to github.
+
+Then create new app in heroku.
+
+https://dashboard.heroku.com/new-app
+
 
 
 
