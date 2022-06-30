@@ -13,13 +13,13 @@
 <body>
     <div class="login">
         <h1>Airfoil Prediction</h1>
-        <form action="{{url_for('predict'}}">
+        <form action="{{url_for('predict')}}">
             <input type="text" name="Frequency" placeholder="Frequency" required="required" /><br>
             <input type="text" name="Angle of attack" placeholder="Angle of attack" required="required" /><br>
             <input type="text" name="Chord length" placeholder="Chord length" required="required" /><br>
             <input type="text" name="Free-stream velocity" placeholder="Free-stream velocity" required="required" /><br>
             <input type="text" name="Suction side" placeholder="Suction side" required="required" /><br>
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large" onsubmit="">Predict</button>
         </form> 
         <br>
         <br>

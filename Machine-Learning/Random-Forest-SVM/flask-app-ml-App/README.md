@@ -105,6 +105,21 @@ def predictions():
 
 We get the output as below with the predicted response:
 
+### fetching values from form inputs
+
+- Write another api to fetch values from form inputs.
+
+```py
+@app.route('/predict', methods=['POST'])
+def predict():
+    # get values from form inputs
+    data = [float(x) for x in request.form.values()]
+    final_features = [np.array(data)]
+    output = model.predict(final_features)[0]
+    # render the home template, pass the predcition as a variable prediction_text
+    return render_template('home.html', precition_text = 'Airfoil Pressure')
+```
+
 ![](./images/1.png) 
 
 **Inference:**
@@ -113,6 +128,11 @@ The output is 120.
 
 ## Deploy the Flask App in Heroku
 
+create a file in project folder called **Procfile**
+
+```procfile
+web: gunicorn app:app
+```
 
 
 
