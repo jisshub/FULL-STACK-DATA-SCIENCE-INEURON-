@@ -143,6 +143,20 @@ Then create new app in heroku.
 https://dashboard.heroku.com/new-app
 
 
+- Choose deployment method as Github.
+
+- Choose the repository from github profile.
+
+- Finally Click Deploy Branch button.
+
+App is finally deployed to heroku server.
+
+https://airfoil2.herokuapp.com/
+
+
+
+
+
 
 
 
